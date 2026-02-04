@@ -1,0 +1,38 @@
+{
+  "refugees": [
+    {
+      "id": 1768119167514,
+      "cid": "QmcLVzmveH1ygP4Q2E3Ny8bSXKvUbCEfcZuhESiBJwMBtf",
+      "fingerprintHash": "7ee8e7370afc7ef81e98b7698fc68c6d360eb3b7b005be7a2c9d3787aa368cc9",
+      "status": "APPROVED",
+      "txHash": "0xa696753965f55c485eb7ed918120bea137f2e7c724203cbc5e344f59e32a3b80"
+    },
+    {
+      "id": 1768119489274,
+      "cid": "QmRTsaeZbFUvYxM44ZDQqW4fjCqKLGargSfyNC12RTwRxH",
+      "fingerprintHash": "739818ba127eb068d48900d9164afdda3d216c3c3148710b4514e05f5269e02e",
+      "status": "APPROVED",
+      "txHash": "0x1480778d08595f3aac6c37ad6b098e74fdd668c83ca08e125b1602f9cf27b2c1"
+    },
+    {
+      "id": 1770099579561,
+      "cid": "QmfKGQD1W1nEoupkqiVnf9eqnptNRvswjAiPSkjR1DX9tf",
+      "fingerprintHash": "95e24ef3ea101e89ed27977e21fb794d58bce99380cee7097205d7dc27990d8e",
+      "status": "APPROVED",
+      "txHash": "0xc0c0369b7f34768cf78ab12b897e2411eefcfbf799eb1df10e7742f62cc2f16b"
+    },
+    {
+      "id": 1770111265654,
+      "cid": "QmW5dvhgiKxnLegNUmJcGavY1Kwq6bbTR6E5dEHKvJDWdg",
+      "fingerprintHash": "2eb27526337a69e743843b33bdfc49006babba2a89984a99bd3b5b2eb032357a",
+      "status": "APPROVED",
+      "txHash": "0x5bf7d730db0cd8a0b517ff6ad1d5a785f9c9c1e932c4beb56d994e7ed931d9c5"
+    },
+    {
+      "id": 1770111594903,
+      "cid": "QmXSTdgozJn3ZQYXEmtLGXYnjgEhxsQKK6xKjfAyxyYsTw",
+      "fingerprintHash": "10fe1bb298a89065f6a78b90567560166292f765824f77d855e0342614ecd4ce",
+      "status": "PENDING"
+    }
+  ]
+}

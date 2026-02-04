@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Government Panel</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.umd.min.js"></script>
+</head>
+
+<body>
+
+<h2>Government Login</h2>
+
+<div id="loginBox">
+  <input id="username" placeholder="Username">
+  <input id="password" type="password">
+  <button onclick="login()">Login</button>
+  <p id="loginMsg"></p>
+</div>
+
+<div id="dashboard" style="display:none">
+  <h3>Pending Refugees</h3>
+  <button onclick="loadPending()">Load Pending</button>
+  <ul id="pendingList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
