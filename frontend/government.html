@@ -3,17 +3,21 @@
 <head>
   <title>Government Panel</title>
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="container">
 
 <h2>Government Login</h2>
 
 <div id="loginBox">
   <input id="username" placeholder="Username">
-  <input id="password" type="password">
+  <input id="password" type="password" placeholder="Password">
   <button onclick="login()">Login</button>
   <p id="loginMsg"></p>
+  <a href="index.html">⬅ Back</a>
 </div>
 
 <div id="dashboard" style="display:none">
@@ -22,6 +26,9 @@
   <ul id="pendingList"></ul>
 </div>
 
+</div>
+
 <script src="script.js"></script>
 </body>
+
 </html>
