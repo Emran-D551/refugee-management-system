@@ -1,37 +1,135 @@
 {
   "refugees": [
     {
-      "id": 1768119167514,
-      "cid": "QmcLVzmveH1ygP4Q2E3Ny8bSXKvUbCEfcZuhESiBJwMBtf",
-      "fingerprintHash": "7ee8e7370afc7ef81e98b7698fc68c6d360eb3b7b005be7a2c9d3787aa368cc9",
-      "status": "APPROVED",
-      "txHash": "0xa696753965f55c485eb7ed918120bea137f2e7c724203cbc5e344f59e32a3b80"
+      "id": 123,
+      "cid": "...",
+      "bdApproved": false,
+      "unhcrApproved": false,
+      "ngoApproved": false,
+      "status": "REJECTED"
     },
     {
-      "id": 1768119489274,
-      "cid": "QmRTsaeZbFUvYxM44ZDQqW4fjCqKLGargSfyNC12RTwRxH",
-      "fingerprintHash": "739818ba127eb068d48900d9164afdda3d216c3c3148710b4514e05f5269e02e",
+      "id": 1780672958462,
+      "cid": "QmQAbrs4VK2tXcW31C8wutquqKnreQHdMwr5k9UhNqqwfR",
+      "fingerprintHash": "fd745d873a50018bf15c8a4999bab8819bb6ff8f8ee34b2f6a029621740b24fa",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
       "status": "APPROVED",
-      "txHash": "0x1480778d08595f3aac6c37ad6b098e74fdd668c83ca08e125b1602f9cf27b2c1"
+      "txHash": "0x1052704a9b511414c84b7400225e0e78b014f6afabe8b69aec816ab1ab91d505"
     },
     {
-      "id": 1770099579561,
-      "cid": "QmfKGQD1W1nEoupkqiVnf9eqnptNRvswjAiPSkjR1DX9tf",
-      "fingerprintHash": "95e24ef3ea101e89ed27977e21fb794d58bce99380cee7097205d7dc27990d8e",
+      "id": 1780675882303,
+      "cid": "QmSLndcUEq66xU7Siq3DuDmmNx41jcYc6BroKijhCWEgTb",
+      "fingerprintHash": "52af0e335cb27e5e258ef5f1d7d8e427e1e653ba6a6e2efbee50c872ff91d1c1",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
       "status": "APPROVED",
-      "txHash": "0xc0c0369b7f34768cf78ab12b897e2411eefcfbf799eb1df10e7742f62cc2f16b"
+      "txHash": "0xa836bafd1b2a6b688c918dd79713677117e5c0bd5198eddb88dc9372b71f0d02"
     },
     {
-      "id": 1770111265654,
-      "cid": "QmW5dvhgiKxnLegNUmJcGavY1Kwq6bbTR6E5dEHKvJDWdg",
-      "fingerprintHash": "2eb27526337a69e743843b33bdfc49006babba2a89984a99bd3b5b2eb032357a",
+      "id": 1780679379707,
+      "cid": "QmSj2GRcNejVJzzCma1Rs565arDZWU4GoQ7tpP4z2worDg",
+      "fingerprintHash": "aff0c1f4c0bd358a2f739fcdfde36298776f20d7e8380a13bb1189e46b49e9bc",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
       "status": "APPROVED",
-      "txHash": "0x5bf7d730db0cd8a0b517ff6ad1d5a785f9c9c1e932c4beb56d994e7ed931d9c5"
+      "txHash": "0x0fa85629050bbd02495414cbf92cb405d731a1bf3210c0ab49da9253232411dc"
     },
     {
-      "id": 1770111594903,
-      "cid": "QmXSTdgozJn3ZQYXEmtLGXYnjgEhxsQKK6xKjfAyxyYsTw",
-      "fingerprintHash": "10fe1bb298a89065f6a78b90567560166292f765824f77d855e0342614ecd4ce",
+      "id": 1780679488525,
+      "cid": "Qmf76zfgyp8ZQYxMLY34uXavYeLLPf5CX84cGQjh6XUhxr",
+      "fingerprintHash": "5a4df495755673ffed2119b718511f199bd5fc951df3a60dfcd06f961b5b9275",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
+      "status": "APPROVED",
+      "txHash": "0xed1f96de1d604f9884e90a14586eac5ea00bfbf86fc1ccb24f948b414959f3ee"
+    },
+    {
+      "id": 1780748749107,
+      "cid": "Qmbq6fMuXNj6SUndwCiHApQ9Q7TSb74s5mk3Fr8P5LgxKd",
+      "fingerprintHash": "cd0a524559f6ceadd82eed3cdb930043c00c49574b336737ac9a2d6a2270ad05",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
+      "status": "APPROVED",
+      "txHash": "0x0d6b164a9cb8986c7dd5ec8638ca7ba19000fc26bff32205b9717c8e80233e00"
+    },
+    {
+      "id": 1780752988353,
+      "cid": "Qmd5Pn5cUM3kvrESMszE5LH6G3u1jCfwxTWHXzJsbmsBR6",
+      "fingerprintHash": "dfd97b13478e0bd1f33e048e98073aaf0a13e40169bf7748d060d1392bad075d",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
+      "status": "APPROVED",
+      "txHash": "0x2e728cdc35b7afd6e8bf4ec192e74baa9277fc3b5b8e0b5e86621f5798b04427"
+    },
+    {
+      "id": 1780754439839,
+      "cid": "Qma51ASqfPxdwhTsQdY1qaP5wXqPiEm6hFQR8M6EHbuvve",
+      "fingerprintHash": "214491d20e9a84c7b7de56ebc16ada25e8d32be5051e5ee3a19864940bf3f7eb",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": true,
+      "status": "APPROVED",
+      "txHash": "0xf9b48bb6643dceb8f8b6fb557b85ba20d56a9c12041a6cdac3a41fb0afd0cf21"
+    },
+    {
+      "id": 1780757078324,
+      "cid": "QmbWrGnb1eUwt8KqGqj1JxkVKrF1KZMhFyQk5nrZrdf5iG",
+      "fingerprintHash": "796062d617dbb0348f2eb115756413c59422d9921721f0f1b3a714b4901314c7",
+      "bdApproved": true,
+      "unhcrApproved": true,
+      "ngoApproved": false,
+      "status": "PENDING"
+    },
+    {
+      "id": 1780757129194,
+      "cid": "QmcMkW5W1wPPXUGg6xjUw76iw66yGCRCzPsdyDvVqQm6GW",
+      "fingerprintHash": "029829879df83b147dfd3a6760e7668b82f46036e5ecdd55942660f9846240ef",
+      "bdApproved": false,
+      "unhcrApproved": false,
+      "ngoApproved": false,
+      "status": "PENDING"
+    },
+    {
+      "id": 1780757794042,
+      "cid": "QmQfQszPWdWDs11MEtz2awG5C9yeNSwxqkwrAhrbNbJ7Ng",
+      "fingerprintHash": "278d9c762d8003f0c40bc6d8302df0b22a961875c276ac8c8ccde8179310f6aa",
+      "bdApproved": false,
+      "unhcrApproved": false,
+      "ngoApproved": false,
+      "status": "PENDING"
+    },
+    {
+      "id": 1780757864098,
+      "cid": "QmQGGPYv3hwY2riNLnJEbrcXANUd9PM7DQHtTSDQ1saY7q",
+      "fingerprintHash": "86e538954416178a69aed1af992e501e37042283fad1fdeb0917840c796c72f0",
+      "bdApproved": false,
+      "unhcrApproved": false,
+      "ngoApproved": false,
+      "status": "PENDING"
+    },
+    {
+      "id": 1780758015349,
+      "cid": "QmXXnMbLFBQy8L8GDAudxYyvazffEAE7ZeVugGRQfMudTx",
+      "fingerprintHash": "c7cee9241933e04d6c5417e4df3ccbd5ba71215e1d5df3a3ae36fc2c86dcdbe8",
+      "bdApproved": false,
+      "unhcrApproved": false,
+      "ngoApproved": false,
+      "status": "PENDING"
+    },
+    {
+      "id": 1780758173548,
+      "cid": "QmbLNnwxGNHfMcHfVwWurkgFsA3fWaY5Z67GDHeqAKpcPT",
+      "fingerprintHash": "d8ac6bdd398e721320d408e1223e618b0612a641cb0f9cf51677767bf3513a44",
+      "bdApproved": false,
+      "unhcrApproved": false,
+      "ngoApproved": false,
       "status": "PENDING"
     }
   ]
