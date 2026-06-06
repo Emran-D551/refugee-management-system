@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Authority</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="loginBox">
+
+        <h2>NGO Authority Login</h2>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <button onclick="loginNGO()">
+            Login
+        </button>
+
+        <p id="loginMsg"></p>
+
+    </div>
+
+    <div id="dashboard" style="display:none">
+
+        <h2>NGO Authority Dashboard</h2>
+
+        <button onclick="loadPending()">
+            Load Pending Refugees
+        </button>
+
+        <ul id="pendingList"></ul>
+
+    </div>
+
+</div>
+
+<script>
+currentAuthority = "ngo";
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
