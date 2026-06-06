@@ -13,102 +13,284 @@ app.use(express.json());
 const GANACHE_RPC = "http://127.0.0.1:7545";
 
 // ⚠️ MUST be the SAME account that deployed the contract
-const PRIVATE_KEY = "0xa8b658e52a36871ddd046ba0831200ed21bd950269a14011b9bccd4868c7e526";
+const PRIVATE_KEY = "0xac52ca8de11488b110678c0f5a81dbc700d007e5144fdd9e21c230910fb2cb58";
 
-const CONTRACT_ADDRESS = "0xbBf9F0ddBA2c8f46a24Dd4b109E93B3ef5858929";
+const CONTRACT_ADDRESS = "0xA1f97582D416ea1117eDd76f1979BC53b0d7Ede6";
 
 const CONTRACT_ABI = [
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_refugeeId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_cid",
-				"type": "string"
-			}
-		],
-		"name": "approveRefugee",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "refugeeId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "cid",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "approvedAt",
-				"type": "uint256"
-			}
-		],
-		"name": "RefugeeApproved",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_refugeeId",
-				"type": "uint256"
-			}
-		],
-		"name": "verifyRefugee",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "approved",
-				"type": "bool"
-			},
-			{
-				"internalType": "string",
-				"name": "cid",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "approvedAt",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_bd",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_unhcr",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_ngo",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "ApprovedByBD",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "ApprovedByNGO",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "ApprovedByUNHCR",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "FinalApproved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "RefugeeRegistered",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "approveByBD",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "approveByNGO",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "approveByUNHCR",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "bangladeshAuthority",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ngoAuthority",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "refugees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "bdApproved",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "unhcrApproved",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "ngoApproved",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "finalApproved",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_cid",
+        "type": "string"
+      }
+    ],
+    "name": "registerRefugee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unhcrAuthority",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "verifyRefugee",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "finalApproved",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "bd",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "unhcr",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "ngo",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
 ];
+
 
 const provider = new ethers.JsonRpcProvider(GANACHE_RPC);
 const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
@@ -155,7 +337,13 @@ function hashFingerprint(fp) {
 // Register
 app.post("/register", async (req, res) => {
   const { name, address, age, fingerprint } = req.body;
+if (Number(age) < 15) {
 
+   return res.status(400).json({
+      error: "Refugee must be at least 15 years old"
+   });
+
+}
   if (!fingerprint) {
     return res.status(400).json({ message: "Fingerprint required" });
   }
@@ -164,7 +352,7 @@ app.post("/register", async (req, res) => {
 
   const fingerprintHash = hashFingerprint(fingerprint);
 
-  // 🔒 DUPLICATE CHECK
+  //  DUPLICATE CHECK
   const exists = data.refugees.find(
     r => r.fingerprintHash === fingerprintHash
   );
@@ -185,12 +373,17 @@ app.post("/register", async (req, res) => {
     fingerprintHash
   });
 
-  data.refugees.push({
-    id,
-    cid,
-    fingerprintHash,
-    status: "PENDING"
-  });
+data.refugees.push({
+   id,
+   cid,
+   fingerprintHash,
+
+   bdApproved:false,
+   unhcrApproved:false,
+   ngoApproved:false,
+
+   status:"PENDING"
+});
 
   writeData(data);
 
@@ -201,6 +394,31 @@ app.post("/register", async (req, res) => {
   });
 });
 
+app.get("/status/:id", (req,res)=>{
+
+   const data = readData();
+
+   const refugee =
+   data.refugees.find(
+      r => r.id == req.params.id
+   );
+
+   if(!refugee){
+
+      return res.status(404).json({
+         error:"Refugee not found"
+      });
+   }
+
+   res.json({
+      id: refugee.id,
+      status: refugee.status,
+      bdApproved: refugee.bdApproved,
+      unhcrApproved: refugee.unhcrApproved,
+      ngoApproved: refugee.ngoApproved
+   });
+
+});
 
 // Pending
 app.get("/pending", (req, res) => {
@@ -208,7 +426,7 @@ app.get("/pending", (req, res) => {
   res.json(data.refugees.filter(r => r.status === "PENDING"));
 });
 
-// ✅ View Details (from IPFS)
+//  View Details (from IPFS)
 app.get("/details/:id", async (req, res) => {
   const data = readData();
   const refugee = data.refugees.find(r => r.id == req.params.id);
@@ -227,47 +445,9 @@ app.get("/details/:id", async (req, res) => {
   });
 });
 
-// ✅ APPROVE ( + Backend)
-app.post("/approve/:id", async (req, res) => {
-  try {
-    const data = readData();
-    const id = Number(req.params.id);
-
-    const index = data.refugees.findIndex(r => r.id === id);
-
-    if (index === -1) {
-      return res.status(404).json({ message: "Refugee not found" });
-    }
-
-    // frontend থেকে txHash আসবে
-    const { txHash } = req.body;
-
-    if (!txHash) {
-      return res.status(400).json({ message: "Transaction hash required" });
-    }
-
-    data.refugees[index].status = "APPROVED";
-    data.refugees[index].txHash = txHash;
-
-    writeData(data);
-
-    res.json({
-      message: "Approved successfully",
-      txHash
-    });
-
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Approval failed" });
-  }
-});
 
 
-
-
-
-
-// ❌ Reject (Backend only)
+//  Reject (Backend only)
 app.post("/reject/:id", (req, res) => {
   const data = readData();
   const refugee = data.refugees.find(r => r.id == req.params.id);
@@ -281,8 +461,6 @@ app.post("/reject/:id", (req, res) => {
 
   res.json({ message: "Rejected successfully" });
 });
-
-
 
 
 // Verify
@@ -310,11 +488,78 @@ app.get("/verify/:id", async (req, res) => {
   });
 });
 
+// Authority Approval
+app.post(
+"/approve/:authority/:id",
 
+async (req,res)=>{
+
+   const authority =
+      req.params.authority;
+
+   const id =
+      Number(req.params.id);
+
+   const data = readData();
+
+   const refugee =
+      data.refugees.find(
+         r => r.id === id
+      );
+
+   if(!refugee){
+      return res.status(404)
+      .json({error:"Not found"});
+   }
+
+   if(authority==="bd"){
+
+      refugee.bdApproved = true;
+
+   }
+
+   if(authority==="unhcr"){
+
+      refugee.unhcrApproved = true;
+
+   }
+
+   if(authority==="ngo"){
+
+      refugee.ngoApproved = true;
+
+   }
+
+if(
+   refugee.bdApproved &&
+   refugee.unhcrApproved &&
+   refugee.ngoApproved
+){
+
+   const tx =
+   await contract.registerRefugee(
+      refugee.id,
+      refugee.cid
+   );
+
+   await tx.wait();
+
+   refugee.status = "APPROVED";
+   refugee.txHash = tx.hash;
+}
+
+writeData(data);
+
+res.json({
+   success:true
+});
+
+});
 
 
 
 /* ---------- Server ---------- */
 app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-});
+  console.log("Server running on http://127.0.0.1:5500/frontend/index.html");
+})
+;
